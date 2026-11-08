@@ -28,6 +28,9 @@ function Carrousel({ list = [] }) {
           }}
         />
       </button>
+      <p className="Carrousel__count">
+        {current + 1} / {list.length}
+      </p>
 
       <img src={list[current]} alt="Illustration" />
     </div>
