@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Carrousel from "../../components/Carrousel/Carrousel";
 import { fetchData } from "../../utils/fetch";
-import { Navigate, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { Rating } from "../../components/components";
 import Collapse from "../../components/Collapse/Collapse";
 
@@ -10,15 +10,16 @@ function Accomodation() {
   const [accomodation, setAccomodation] = useState([]);
 
   const { name } = accomodation.host || {};
-  const firstLetter = name?.split(" ")[0].slice(0, 1);
-  const secondLetter = name?.split(" ")[1].slice(0, 1);
+  const firstLetter = name?.split(" ")?.[0]?.slice(0, 1);
+  const secondLetter = name?.split(" ")?.[1]?.slice(0, 1);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchData("/data/accomodations.json", "get").then((data) => {
       const acc = data.find((acc) => acc.id === id);
 
       if (acc) setAccomodation(acc);
-      else Navigate("/404");
+      else navigate("/404");
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -56,8 +57,8 @@ function Accomodation() {
               />
             ) : (
               <p className="Accomodation-page__rating-host__host__initials">
-                {firstLetter}
-                {secondLetter}
+                {firstLetter && firstLetter}
+                {secondLetter && secondLetter}
               </p>
             )}
           </div>
@@ -75,7 +76,7 @@ function Accomodation() {
         />
         <Collapse
           label={"Équipements"}
-          content={accomodation.equipments.map((txt) => (
+          content={accomodation.equipments?.map((txt) => (
             <p>{txt}</p>
           ))}
           style={{
