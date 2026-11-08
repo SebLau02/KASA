@@ -19,7 +19,9 @@ function Collapse({ label, content, expanded = false, ...props }) {
         />
       </button>
       <div className={`Collapse__content ${open ? "open" : ""}`}>
-        <div className={`Collapse__content__slide`}>{content}</div>
+        <div className="Collapse__content__slide">
+          <div className="Collapse__content__inner">{content}</div>
+        </div>
       </div>
     </div>
   );

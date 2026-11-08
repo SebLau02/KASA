@@ -43,29 +43,27 @@
     }
   }
   &__content {
-    position: relative;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    display: grid;
+    grid-template-rows: 0fr;
     font-size: 16px;
-    transform-origin: top;
-    z-index: -1;
-    overflow: hidden;
-    height: 0;
-    transition: height ease 0.2s;
+    transition: grid-template-rows ease 0.2s;
 
-    &__slide {
-      background-color: var(--grey-400);
-      padding: 26px;
-
-      transform: translateY(calc(-100%));
-      transition: transform ease 0.2s;
-    }
     &.open {
-      height: 100%;
+      grid-template-rows: 1fr;
+    }
 
-      .Collapse__content__slide {
-        transform: translateY(0%);
-      }
+    // Cache le contenu pendant l'animation (min-height: 0 permet à la ligne de se réduire à 0)
+    &__slide {
+      overflow: hidden;
+      min-height: 0;
+      background-color: var(--grey-400);
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    // Le padding est ici pour ne pas garder de hauteur quand c'est fermé
+    &__inner {
+      padding: 26px;
     }
 
     @include media("md") {
