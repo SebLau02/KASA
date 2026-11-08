@@ -1,4 +1,4 @@
-import DarkLogo from "/public/DarkLogo.svg";
+import DarkLogo from "/DarkLogo.svg";
 
 function Footer() {
   return (

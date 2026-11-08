@@ -2,6 +2,7 @@
 
 .Collapse {
   &__toggler {
+    position: relative;
     background-color: var(--primary);
     color: var(--white);
     display: flex;
@@ -13,6 +14,14 @@
     border: none;
     font-size: 18px;
     font-weight: bold;
+    z-index: 1;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+    &:active {
+      filter: brightness(1);
+    }
 
     @include media("md") {
       font-size: 13px;
@@ -34,11 +43,30 @@
     }
   }
   &__content {
-    background-color: var(--grey-400);
-    padding: 26px;
+    position: relative;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     font-size: 16px;
+    transform-origin: top;
+    z-index: -1;
+    overflow: hidden;
+    height: 0;
+    transition: height ease 0.2s;
+
+    &__slide {
+      background-color: var(--grey-400);
+      padding: 26px;
+
+      transform: translateY(calc(-100%));
+      transition: transform ease 0.2s;
+    }
+    &.open {
+      height: 100%;
+
+      .Collapse__content__slide {
+        transform: translateY(0%);
+      }
+    }
 
     @include media("md") {
       font-size: 14px;

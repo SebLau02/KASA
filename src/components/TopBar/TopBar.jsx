@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import MainLogo from "/public/MainLogo.svg";
+import MainLogo from "/MainLogo.svg";
 
 function TopBar() {
   return (

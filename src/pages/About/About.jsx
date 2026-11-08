@@ -1,5 +1,5 @@
 import { Collapse, HomeBanner } from "../../components/components";
-import AboutCover from "/public/about-cover.png";
+import AboutCover from "/about-cover.png";
 
 const aboutContents = [
   {
@@ -29,8 +29,8 @@ function About() {
     <div className="AboutPage">
       <HomeBanner url={AboutCover} title={""} overlay={false} />
       <div className="AboutPage__collapses">
-        {aboutContents.map((coll) => (
-          <Collapse label={coll.label} content={coll.content} />
+        {aboutContents.map((coll, i) => (
+          <Collapse key={i} label={coll.label} content={coll.content} />
         ))}
       </div>
     </div>

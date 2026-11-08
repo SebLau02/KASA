@@ -78,8 +78,8 @@ function Accomodation() {
         />
         <Collapse
           label={"Équipements"}
-          content={accomodation.equipments?.map((txt) => (
-            <p>{txt}</p>
+          content={accomodation.equipments?.map((txt, i) => (
+            <p key={i}>{txt}</p>
           ))}
           style={{
             width: "582px",

@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { Routes, Route } from "react-router";
+import { Routes, Route, Navigate } from "react-router";
 import { About, Accomodation, Accomodations, NotFound } from "./pages/pages";
 import { MainLayout } from "./components/components";
 
@@ -8,6 +8,7 @@ function App() {
     <>
       <Suspense fallback={<>Je charge</>}>
         <Routes>
+          <Route path="/" element={<Navigate to="/logements" />} />
           <Route path="/logements/">
             <Route
               index

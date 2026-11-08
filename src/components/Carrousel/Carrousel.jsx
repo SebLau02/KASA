@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Chevron from "/public/chevron.png";
+import Chevron from "/chevron.png";
 
 function Carrousel({ list = [] }) {
   const [current, setCurrent] = useState(0);
