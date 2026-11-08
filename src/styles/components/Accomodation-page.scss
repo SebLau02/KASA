@@ -9,6 +9,7 @@
   &__main {
     display: flex;
     justify-content: space-between;
+    margin-top: 16px;
 
     @include media("md") {
       flex-direction: column;
@@ -35,6 +36,7 @@
         font-size: 18px;
         color: var(--black);
         font-weight: 500;
+        margin-top: 8px;
 
         @include media("md") {
           font-size: 14px;
@@ -65,6 +67,7 @@
   &__rating-host {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 16px;
 
     &__host {
@@ -94,17 +97,20 @@
     }
 
     @include media("md") {
+      margin-top: 16px;
       flex-direction: row-reverse;
+      flex-wrap: wrap;
     }
   }
 
   &__collapse {
     display: flex;
     justify-content: space-between;
+    gap: 32px;
 
     @include media("md") {
       flex-direction: column;
-      gap: 24px;
+      gap: 16px;
       .Collapse {
         max-width: 100%;
       }

@@ -1,3 +1,5 @@
+@use "../mixins/mixins.scss" as *;
+
 .Carrousel {
   position: relative;
   height: 415px;
@@ -24,6 +26,13 @@
     &[name="next"] {
       right: 0;
     }
+
+    @include media("md") {
+      > img {
+        width: 12px;
+      }
+      padding: 16px;
+    }
   }
   > img {
     width: 100%;
@@ -38,5 +47,11 @@
     font-size: 18px;
     font-weight: 500;
     color: var(--white);
+    @include media("md") {
+      display: none;
+    }
+  }
+  @include media("md") {
+    height: 255px;
   }
 }

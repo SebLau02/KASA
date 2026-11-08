@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 13px 26px;
+    padding: 13px 16px;
     width: 100%;
     border-radius: var(--radius);
     border: none;
@@ -16,6 +16,8 @@
 
     @include media("md") {
       font-size: 13px;
+      padding: 3px 16px;
+      border-radius: 5px;
     }
 
     img {
@@ -25,6 +27,9 @@
 
       &.active {
         rotate: 90deg;
+      }
+      @include media("md") {
+        width: 10px;
       }
     }
   }

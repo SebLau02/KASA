@@ -1,5 +1,13 @@
+@use "../mixins/mixins.scss" as *;
+
 .Rating {
   display: flex;
   gap: 12px;
   align-items: center;
+  @include media("md") {
+    gap: 5px;
+    img {
+      width: 13px;
+    }
+  }
 }

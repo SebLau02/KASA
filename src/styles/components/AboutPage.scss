@@ -1,3 +1,5 @@
+@use "../mixins/mixins.scss" as *;
+
 .AboutPage {
   .HomeBanner {
     margin-top: 50px;
@@ -9,5 +11,8 @@
     gap: 24px;
     max-width: 1023px;
     margin: 24px auto;
+    @include media("md") {
+      gap: 16px;
+    }
   }
 }
