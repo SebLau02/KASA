@@ -1,0 +1,66 @@
+.Accomodation-page {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  &__title-host {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+      h1 {
+        font-size: 36px;
+        color: var(--primary);
+        font-weight: 500;
+      }
+      p {
+        font-size: 18px;
+        color: var(--black);
+        font-weight: 500;
+      }
+    }
+
+    &__host {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      p {
+        max-width: 93px;
+        text-align: end;
+        font-size: 18px;
+        color: var(--primary);
+        font-weight: 400;
+      }
+      img,
+      &__initials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--grey-600);
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+      }
+    }
+  }
+  &__tags-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    &__tags {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      &__tag {
+        background-color: var(--primary);
+        border-radius: var(--radius);
+        padding: 3px 5px;
+        min-width: 115px;
+        text-align: center;
+        color: var(--white);
+      }
+    }
+  }
+}
