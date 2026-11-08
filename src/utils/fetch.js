@@ -1,13 +1,5 @@
 export const fetchData = async (path, request = "get") => {
-  try {
-    const opts = {
-      method: request,
-    };
-    const res = await fetch(path, opts);
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.message);
-    return data;
-  } catch (error) {
-    return error;
-  }
+  const res = await fetch(path, { method: request });
+  if (!res.ok) throw new Error(`Erreur ${res.status} sur ${path}`);
+  return res.json();
 };
