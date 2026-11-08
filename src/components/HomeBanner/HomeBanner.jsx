@@ -1,7 +1,7 @@
-function HomeBanner({ url, title }) {
+function HomeBanner({ url, title, overlay = true }) {
   return (
     <div
-      className="HomeBanner"
+      className={`HomeBanner ${overlay ? "overlay" : ""}`}
       style={{
         backgroundImage: `url(${url})`,
       }}

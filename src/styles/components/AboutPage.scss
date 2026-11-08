@@ -1,0 +1,13 @@
+.AboutPage {
+  .HomeBanner {
+    margin-top: 50px;
+  }
+
+  &__collapses {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 1023px;
+    margin: 24px auto;
+  }
+}
