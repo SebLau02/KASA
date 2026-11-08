@@ -5,7 +5,13 @@ function MainLayout({ children }) {
   return (
     <div className="screen">
       <TopBar />
-      <main>{children}</main>
+      <main
+        style={{
+          margin: "20px",
+        }}
+      >
+        {children}
+      </main>
 
       <Footer />
     </div>

@@ -1,9 +1,10 @@
 .AccomodationGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  justify-content: space-between;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 50px;
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   margin-top: 43px;
   background-color: var(--grey-400);
   border-radius: 25px;

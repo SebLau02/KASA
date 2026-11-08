@@ -3,6 +3,7 @@ import HomeBanner from "../../components/HomeBanner/HomeBanner";
 const BannerImage = "/banner.png";
 import { fetchData } from "../../utils/fetch";
 import AccomodationCard from "../../components/AccomodationCard/AccomodationCard";
+import { Link } from "react-router";
 
 function Accomodations() {
   const [accomodations, setAccomodations] = useState([]);
@@ -19,7 +20,9 @@ function Accomodations() {
 
       <div className="AccomodationGrid">
         {accomodations.map((acc) => (
-          <AccomodationCard title={acc.title} image={acc.cover} key={acc.id} />
+          <Link to={`${acc.id}`} key={acc.id}>
+            <AccomodationCard title={acc.title} image={acc.cover} />
+          </Link>
         ))}
       </div>
     </div>

@@ -3,9 +3,11 @@
   flex-direction: row;
   align-items: center;
   gap: 57px;
+  margin: 20px;
 
   img {
     margin-right: auto;
+    max-width: 145px;
   }
   a {
     position: relative;

@@ -1,5 +1,10 @@
+@use "../mixins/mixins.scss" as *;
+
 .screen {
   max-width: 1240px;
   margin: auto;
   padding-top: 45px;
+  @include media("lg") {
+    padding-top: 20px;
+  }
 }
