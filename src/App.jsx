@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { Routes, Route } from "react-router";
 import { NotFound } from "./pages/pages";
+import { MainLayout } from "./components/components";
 
 function App() {
   return (
@@ -11,7 +12,14 @@ function App() {
             {/* <Route index element={<EmployeesList />} />
               <Route path="create" element={<CreateEmployee />} /> */}
           </Route>
-          <Route path="*" element={<NotFound />} />
+          <Route
+            path="*"
+            element={
+              <MainLayout>
+                <NotFound />
+              </MainLayout>
+            }
+          />
         </Routes>
       </Suspense>
     </>

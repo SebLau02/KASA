@@ -1,0 +1,17 @@
+@use "sass:map";
+
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+);
+
+// Desktop-first. Usage : @include media("lg") { ... }
+// => s'applique aux écrans plus petits que 992px
+@mixin media($bp) {
+  $max: map.get($breakpoints, $bp) - 1px;
+  @media (max-width: $max) {
+    @content;
+  }
+}
