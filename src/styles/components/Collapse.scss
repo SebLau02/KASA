@@ -1,3 +1,5 @@
+@use "../mixins/mixins.scss" as *;
+
 .Collapse {
   &__toggler {
     background-color: var(--primary);
@@ -11,6 +13,11 @@
     border: none;
     font-size: 18px;
     font-weight: bold;
+
+    @include media("md") {
+      font-size: 13px;
+    }
+
     img {
       rotate: 270deg;
       width: 15px;
@@ -26,5 +33,10 @@
     padding: 26px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    font-size: 16px;
+
+    @include media("md") {
+      font-size: 14px;
+    }
   }
 }

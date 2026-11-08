@@ -32,9 +32,16 @@
     color: var(--white);
     font-size: clamp(24px, 4.5vw, 48px);
     font-weight: bold;
+    max-width: 732px;
+
+    @include media("sm") {
+      max-width: 225px;
+      margin-left: 16px;
+    }
   }
 
   @include media("sm") {
     height: 111px;
+    justify-content: start;
   }
 }
