@@ -9,8 +9,6 @@ function Accomodation() {
   const { id } = useParams();
   const [accomodation, setAccomodation] = useState([]);
 
-  console.log(accomodation);
-
   const { name } = accomodation.host || {};
   const firstLetter = name?.split(" ")[0].slice(0, 1);
   const secondLetter = name?.split(" ")[1].slice(0, 1);
@@ -76,8 +74,10 @@ function Accomodation() {
           }}
         />
         <Collapse
-          label={"Description"}
-          content={accomodation.description}
+          label={"Équipements"}
+          content={accomodation.equipments.map((txt) => (
+            <p>{txt}</p>
+          ))}
           style={{
             width: "582px",
           }}
