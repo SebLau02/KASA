@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { Routes, Route } from "react-router";
-import { NotFound } from "./pages/pages";
+import { About, Accomodation, Accomodations, NotFound } from "./pages/pages";
 import { MainLayout } from "./components/components";
 
 function App() {
@@ -8,10 +8,32 @@ function App() {
     <>
       <Suspense fallback={<>Je charge</>}>
         <Routes>
-          <Route path="/employees/">
-            {/* <Route index element={<EmployeesList />} />
-              <Route path="create" element={<CreateEmployee />} /> */}
+          <Route path="/logements/">
+            <Route
+              index
+              element={
+                <MainLayout>
+                  <Accomodations />
+                </MainLayout>
+              }
+            />
+            <Route
+              path=":id"
+              element={
+                <MainLayout>
+                  <Accomodation />
+                </MainLayout>
+              }
+            />
           </Route>
+          <Route
+            path="a-propos"
+            element={
+              <MainLayout>
+                <About />
+              </MainLayout>
+            }
+          />
           <Route
             path="*"
             element={
