@@ -9,9 +9,9 @@ function Accomodations() {
   const [accomodations, setAccomodations] = useState([]);
 
   useEffect(() => {
-    fetchData("/data/accomodations.json", "get").then((data) => {
-      setAccomodations(data);
-    });
+    fetchData("/data/accomodations.json", "get")
+      .then((data) => setAccomodations(data))
+      .catch((error) => console.error(error));
   }, []);
 
   return (

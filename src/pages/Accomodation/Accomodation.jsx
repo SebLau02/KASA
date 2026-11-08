@@ -15,12 +15,14 @@ function Accomodation() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetchData("/data/accomodations.json", "get").then((data) => {
-      const acc = data.find((acc) => acc.id === id);
+    fetchData("/data/accomodations.json", "get")
+      .then((data) => {
+        const acc = data.find((acc) => acc.id === id);
 
-      if (acc) setAccomodation(acc);
-      else navigate("/404");
-    });
+        if (acc) setAccomodation(acc);
+        else navigate("/404");
+      })
+      .catch((error) => console.error(error));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
