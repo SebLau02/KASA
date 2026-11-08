@@ -1,0 +1,39 @@
+.AccomodationCard {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 340px;
+  height: 340px;
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  padding: 20px;
+
+  h2 {
+    margin-top: auto;
+    z-index: 1;
+    display: block;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background: linear-gradient(
+      #ffffff00 0%,
+      #0a0a0a00 42%,
+      rgba(4, 4, 4, 0.41) 100%,
+      #000000 100%
+    );
+    z-index: 0;
+    border-radius: var(--radius);
+  }
+}
