@@ -1,3 +1,5 @@
+@use "../mixins/mixins.scss" as *;
+
 .Footer {
   display: flex;
   flex-direction: column;
@@ -12,5 +14,10 @@
     font-size: 24px;
     font-weight: 500;
     color: var(--white);
+    text-align: center;
+
+    @include media("sm") {
+      font-size: 12px;
+    }
   }
 }
