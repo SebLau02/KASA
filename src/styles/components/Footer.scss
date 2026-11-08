@@ -1,0 +1,16 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 29px;
+  background-color: var(--dark);
+  height: 209px;
+  padding-bottom: 29px;
+
+  p {
+    font-size: 24px;
+    font-weight: medium;
+    color: var(--white);
+  }
+}

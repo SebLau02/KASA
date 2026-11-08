@@ -1,3 +1,4 @@
+import Footer from "../Footer/Footer";
 import TopBar from "../TopBar/TopBar";
 
 function MainLayout({ children }) {
@@ -5,6 +6,8 @@ function MainLayout({ children }) {
     <div className="screen">
       <TopBar />
       <main>{children}</main>
+
+      <Footer />
     </div>
   );
 }
