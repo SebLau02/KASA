@@ -1,3 +1,5 @@
+@use "../mixins/mixins.scss" as *;
+
 .TopBar {
   display: flex;
   flex-direction: row;
@@ -11,6 +13,8 @@
   }
   a {
     position: relative;
+    text-transform: uppercase;
+    font-size: 24px;
 
     &::before {
       position: absolute;
@@ -30,6 +34,10 @@
       &::before {
         transform: scaleX(1);
       }
+    }
+
+    @include media("sm") {
+      font-size: 12px;
     }
   }
 }
