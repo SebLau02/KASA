@@ -1,0 +1,30 @@
+.Collapse {
+  &__toggler {
+    background-color: var(--primary);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 26px;
+    width: 100%;
+    border-radius: var(--radius);
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    img {
+      rotate: 270deg;
+      width: 15px;
+      transition: rotate ease 0.2s;
+
+      &.active {
+        rotate: 90deg;
+      }
+    }
+  }
+  &__content {
+    background-color: var(--grey-400);
+    padding: 26px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}

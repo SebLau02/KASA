@@ -1,11 +1,23 @@
+@use "../mixins/mixins.scss" as *;
+
 .Accomodation-page {
   display: flex;
   gap: 16px;
   flex-direction: column;
-  &__title-host {
+  &__main {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+
+    @include media("md") {
+      flex-direction: column;
+    }
+  }
+  &__title-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     &__title {
       h1 {
@@ -19,6 +31,26 @@
         font-weight: 500;
       }
     }
+    &__tags {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      &__tag {
+        background-color: var(--primary);
+        border-radius: var(--radius);
+        padding: 3px 10px;
+        min-width: 115px;
+        text-align: center;
+        color: var(--white);
+      }
+    }
+  }
+
+  &__rating-host {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 
     &__host {
       display: flex;
@@ -42,24 +74,21 @@
         height: 64px;
       }
     }
+
+    @include media("md") {
+      flex-direction: row-reverse;
+    }
   }
-  &__tags-rating {
+
+  &__collapse {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    &__tags {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      &__tag {
-        background-color: var(--primary);
-        border-radius: var(--radius);
-        padding: 3px 5px;
-        min-width: 115px;
-        text-align: center;
-        color: var(--white);
+
+    @include media("md") {
+      flex-direction: column;
+      gap: 24px;
+      .Collapse {
+        max-width: 100%;
       }
     }
   }
