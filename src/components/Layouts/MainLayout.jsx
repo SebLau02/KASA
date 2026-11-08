@@ -4,7 +4,7 @@ function MainLayout({ children }) {
   return (
     <div className="screen">
       <TopBar />
-      {children}
+      <main>{children}</main>
     </div>
   );
 }
