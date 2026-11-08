@@ -1,7 +1,7 @@
 @use "../mixins/mixins.scss" as *;
 
 .screen {
-  max-width: 1240px;
+  max-width: 1290px;
   margin: auto;
   padding-top: 45px;
   @include media("lg") {
