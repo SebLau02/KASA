@@ -5,6 +5,7 @@ import HomeBanner from "./HomeBanner/HomeBanner.jsx";
 import TopBar from "./TopBar/TopBar.jsx";
 import Rating from "./Rating/Rating.jsx";
 import Collapse from "./Collapse/Collapse.jsx";
+import Loader from "./Loader/Loader.jsx";
 
 export {
   MainLayout,
@@ -14,4 +15,5 @@ export {
   HomeBanner,
   TopBar,
   Rating,
+  Loader,
 };
