@@ -1,5 +1,5 @@
-import Footer from "../Footer/Footer";
-import TopBar from "../TopBar/TopBar";
+import Footer from "./Footer";
+import TopBar from "./TopBar";
 
 function MainLayout({ children }) {
   return (

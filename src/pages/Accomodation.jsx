@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import Carrousel from "../../components/Carrousel/Carrousel";
-import { fetchData } from "../../utils/fetch";
+import { fetchData } from "../utils/fetch";
 import { useNavigate, useParams } from "react-router";
-import { Rating } from "../../components/components";
-import Collapse from "../../components/Collapse/Collapse";
+import { Carrousel, Rating, Collapse } from "../components/components";
 
 function Accomodation() {
   const { id } = useParams();

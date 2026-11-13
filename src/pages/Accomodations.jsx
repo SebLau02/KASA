@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import HomeBanner from "../../components/HomeBanner/HomeBanner";
 const BannerImage = "/banner.png";
-import { fetchData } from "../../utils/fetch";
-import AccomodationCard from "../../components/AccomodationCard/AccomodationCard";
+import { fetchData } from "../utils/fetch";
 import { Link } from "react-router";
+import HomeBanner from "../components/HomeBanner";
+import AccomodationCard from "../components/AccomodationCard";
 
 function Accomodations() {
   const [accomodations, setAccomodations] = useState([]);

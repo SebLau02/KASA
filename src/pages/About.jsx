@@ -1,4 +1,4 @@
-import { Collapse, HomeBanner } from "../../components/components";
+import { Collapse, HomeBanner } from "../components/components";
 import AboutCover from "/about-cover.png";
 
 const aboutContents = [
